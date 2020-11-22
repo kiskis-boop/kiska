@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>задачка</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Число-палиндром с обеих сторон (справа налево и слева направо) читается одинаково.</p>
+    <p>Самое большое число-палиндром, полученное умножением двух двузначных чисел – 9009 = 91 × 99.</p>
+    <p>Найдите самый большой палиндром, полученный умножением двух трехзначных чисел.</p>
+    
+    <a href="../yesyes.html">Назад</a>
+    
+    <p><b>Результат в консоли</b></p>
+    <script>
+            let list = [];
+            let solution = 9009;            // Самый большой двухзначный палиндром
+            let n, i, j;
+
+            
+            for (i = 999; i > 99; i--) {    // > 99 потому что нам не нужно проверять двухзначные числа
+            for (j = i; j > 99; j--) {
+                list.push(i * j);
+            }
+            }
+            list.sort(function (a, b) {
+            return a - b;
+            });
+
+            // Проверка отсортированного списка для самого большого палиндрома
+            for (i = list.length; i--;) {
+            n = list[i];
+            if (n - String.prototype.split.call(n, "").reverse().join('') === 0) {
+                solution = n;
+                break;
+            }
+            }
+
+            console.log(solution);
+            
+    </script>
+</body>
+</html>

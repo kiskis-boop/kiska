@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel = "stylesheet" href="igra.CSS">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.5">
+	<title>крестики-нолики</title>
+	<style>
+		#field td {
+		width: 150px;
+		height: 150px;
+		border: 1px double rgb(255, 115, 115);
+		text-align: center;
+		font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+    <a href="../yesyes.html">Назад</a>
+	<table id="field">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+	<script>
+        function start(cells) {
+        let i = 0;	// номер хода
+        for (let cell of cells) {
+            cell.addEventListener('click', function step() { //использование функции step при клике на ячейку
+                if (i % 2 == 0) { 
+                    this.innerHTML = 'X'; // при четном ходе выводится крестик
+                } else {
+                    this.innerHTML = '0'; // при нечетном ходе выводится ноль
+                }
+                this.removeEventListener('click', step); // удаление возможности использовать функцию step при нажатии на ту же ячейку			
+                if (isVictory(cells)) {
+                    alert("Победили "+this.innerHTML); // вывод имени победителя и перезагрузка страницы
+                    location.reload()
+                }
+                else if (i == 8) { // если сделано 9 ходов и функция isVictory не вернула true
+                    alert('ничья');
+                    location.reload() //ничья и перезагрузка страницы
+                }			
+                i++;
+            });
+        }
+        }
+        function isVictory(cells) { // функция для определения победителя
+        let combs = [ //выигрышные комбинации
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+        ];
+        for (let comb of combs) { 
+            if (
+                cells[comb[0]].innerHTML == cells[comb[1]].innerHTML &&
+                cells[comb[1]].innerHTML == cells[comb[2]].innerHTML &&
+                cells[comb[0]].innerHTML != ''
+            ) {
+                return true; // победа при совпадении содержимого клеток с выигрышными комбинациями
+            }
+        }
+        return false;
+        }
+        let cells = document.querySelectorAll('#field td') // получение всех td в элементе с id = "field"
+        start(cells) // использование функции start	
+	</script>
+</body>
+</html>

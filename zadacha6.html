@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>задачка</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Сумма квадратов первых десяти натуральных чисел равна</p>
+    <p>12 + 22 + ... + 102 = 385</p>
+    <p>Квадрат суммы первых десяти натуральных чисел равен</p>
+    <p>(1 + 2 + ... + 10)2 = 552 = 3025</p>
+    <p>Следовательно, разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел составляет 3025 − 385 = 2640.</p>
+    <p>Найдите разность между суммой квадратов и квадратом суммы первых ста натуральных чисел.</p>
+    <p><b>Результат в консоли</b></p>
+    <a href="../yesyes.html">Назад</a>
+<script>
+        let test = 100;
+        let sumOfSquares = 0;
+        let squareOfSums = 0;
+        let i;
+
+        for (i = 1; i <= test; i++) {   //Перебор чисел от 1 до 100
+        sumOfSquares += i * i;          //Возводим числа во вторую степень
+        squareOfSums += i;              //сумма всех чисел
+        }
+        squareOfSums *= squareOfSums;   // возведение в квардат суммы
+
+        console.log(squareOfSums - sumOfSquares); // высчитываем разность между squareOfSums и sumOfSquares и выводим результат
+</script>
+</body>
+</html>

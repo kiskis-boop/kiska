@@ -1,0 +1,50 @@
+*,*::before,*::after
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+header
+{
+    background-color:white;
+    display: flex;
+    color: black;
+    justify-content: center;
+    padding: 20px;
+}
+
+main
+{
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ul_container
+{
+    list-style-type: none;
+}
+.ul_container > li {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.ul_container > ul {
+    margin-left: 20px;
+}
+.ul_container > ul > li > a {
+    color: black
+}
+.ul_container > ul > li > li:hover {
+    color: blue
+}
+
+a
+{
+    font-size: 24px;
+    text-decoration: none;
+    color: blue;
+}
+
+

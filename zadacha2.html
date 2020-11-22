@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>задачка</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Каждый следующий элемент ряда Фибоначчи получается при сложении двух предыдущих. Начиная с 1 и 2, первые 10 элементов будут:</p>
+    <p> 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...</p>
+    <p>Найдите сумму всех четных элементов ряда Фибоначчи, которые не превышают четыре миллиона.</p>
+    <p><b>Результат в консоли</b></p>
+    <a href="../yesyes.html">Назад</a>
+    
+<script>
+        let previous = 0;                           //первое число
+        let current = 1;                            //следующее число 
+        let result = 0;                     
+        let temp;                                   
+                        
+        while (current < 4e6) {                     //Цикл будет работать пока current меньше 4 миллионов(4e6 это 4 миллиона, в данном случае 6 это нули, а 4 число до нулей)
+        if (current % 2 === 0) result += current;   // если число кратно двум(четное) то прибавляем число к результату
+        temp = current;                             //Записываем  current в temp
+        current = current + previous;               // получение следующего числа фибоначи и записывание его в current
+        previous = temp;                            //previous записываем в temp
+        }
+
+        console.log(result);
+        
+</script>
+</body>
+</html>

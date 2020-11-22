@@ -1,0 +1,34 @@
+.yellow
+{
+	background-color: yellow;
+}
+
+.violet
+{
+	background-color: violet;
+}
+
+.brown
+{
+	background-color: brown;
+}
+
+*
+{
+    margin: 5px;
+    padding: 5px;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+}
+
+#pole td
+{
+	width: 150px;
+	height: 150px;
+	text-align: center;
+}
+
