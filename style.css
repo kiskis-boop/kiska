@@ -1,50 +1,176 @@
-*,*::before,*::after
-{
-    margin: 0px;
-    padding: 0px;
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	width: 100%;
+	height: 100%;
+} 
+
+.Golova2 {
+	font-size: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+.Golova2 a {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 7px;
+	color: rgb(0, 0, 0);
+	background-color: #d2fff4;
+	text-decoration: none;
+}
+.Golova2 a:hover {
+	background-color: #56fad6;
+	border: solid white 2px;
+}
+.Golova {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 80%;
+}
+header {
+	background-color: #3F92D2;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 15%;
+	color: white;
+}
+header img {
+	width: 10%;
+	padding-left: 10px;
+}
+header > a {
+	text-decoration: none;
+	color: white;
+	padding-right: 10px;
+}
+header > a:hover {
+	text-decoration: underline;
+}
+.Golova > a {
+	text-decoration: none;
+	color: white;
+	padding-right: 10px;
+}
+.Golova > a:hover {
+	text-decoration: underline;
+}
+main {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	height: 70%;
+ }
+ main img {
+	 width: 30%;
+	 height: 10%;
+ }
+
+
+.popularnoe {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.tovar img {
+	width: 60%;
+	height: 30%;
+}
+.tovar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+.popularnoe {
+	padding-top: 5%;
+}
+.popular h1 {
+	font-size: 40px;
+}
+footer {
+	background-color: #fbffe6;
+	color: black;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+footer a {
+		padding-left: 10%;
+		color: white;
+		text-decoration: none;
+}
+footer a:hover {
+	text-decoration: underline;
 }
 
-header
-{
-    background-color:white;
-    display: flex;
-    color: black;
-    justify-content: center;
-    padding: 20px;
+@media only screen and (max-width: 800px) {
+	.Golova2 {
+			font-size: 10px;
+	}
+	.Golova h1 {
+		font-size: 20px;
+	}
+	.Golova a {
+		font-size: 10px;
+	}
+	.Golova2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
-
-main
-{
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+@media only screen and (min-width: 3000px) {
+	.Golova2 {
+			font-size: 100px;
+	}
+	.Golova h1 {
+		font-size: 120px;
+	}
+	.Golova a {
+		font-size: 60px;
+	}
+	.Golova2 {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.tovar img {
+		width: 60%;
+		height: 30%;
+	}
+	.tovar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 80px;
+	}
+	.popularnoe {
+		padding-top: 2%;
+	}
+	.popularnoe h1 {
+		font-size: 120px;
+		border: solid 2px black;
+	}
+	footer a {
+		  font-size: 60px;
+			padding-left: 10%;
+			color: white;
+			text-decoration: none;
+	}
 }
-
-.ul_container
-{
-    list-style-type: none;
-}
-.ul_container > li {
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-.ul_container > ul {
-    margin-left: 20px;
-}
-.ul_container > ul > li > a {
-    color: black
-}
-.ul_container > ul > li > li:hover {
-    color: blue
-}
-
-a
-{
-    font-size: 24px;
-    text-decoration: none;
-    color: blue;
-}
-
-
